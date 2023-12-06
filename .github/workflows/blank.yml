@@ -18,4 +18,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/colashn65/0612-actions:1.0 .
       - run: docker push ghcr.io/colashn65/0612-actions:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'colashn65-0612-k3uooqgp9g1#Jk4V97dfV9qpPtOO1v9piJcWKp9sMtlt@colashn65-0612-k3uooqgp9g1.ssh.ws-eu106.gitpod.io' "cd /workspace/colashn65 && docker compose pull && docker compose up -d";
+      - run: ssh -o "StrictHostKeyChecking no" 'colashn65-0612-k3uooqgp9g1#Jk4V97dfV9qpPtOO1v9piJcWKp9sMtlt@colashn65-0612-k3uooqgp9g1.ssh.ws-eu106.gitpod.io' "cd /workspace/0612 && docker compose pull && docker compose up -d";
