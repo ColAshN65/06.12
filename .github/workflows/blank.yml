@@ -24,13 +24,13 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           message: "Сделано успешно"
-          to: 714820764
-          token: 6960121384:AAG_B0Q2sxwL386QIisQofnq0Hei_PTYzJE
+          to: 1680135436
+          token: 6858811804:AAEg1CXKjqsilxqyd3-Eq6GAk7UkedYkblU
       - name: send default message
         if: failure()
         uses: appleboy/telegram-action@master
         with:
           message: "Сделано no успешно"
-          to: 714820764
-          token: 6960121384:AAG_B0Q2sxwL386QIisQofnq0Hei_PTYzJE
+          to: 1680135436
+          token: 6858811804:AAEg1CXKjqsilxqyd3-Eq6GAk7UkedYkblU
         
