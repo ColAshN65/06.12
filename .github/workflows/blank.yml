@@ -19,3 +19,18 @@ jobs:
       - run: docker build -t ghcr.io/colashn65/0612-actions:1.0 .
       - run: docker push ghcr.io/colashn65/0612-actions:1.0
       - run: ssh -o "StrictHostKeyChecking no" 'colashn65-0612-k3uooqgp9g1#Jk4V97dfV9qpPtOO1v9piJcWKp9sMtlt@colashn65-0612-k3uooqgp9g1.ssh.ws-eu106.gitpod.io' "cd /workspace/06.12 && docker compose pull && docker compose up -d";
+      - name: send default messgae
+        if: success()
+        uses: appleboy/telegram-action@master
+        with:
+          message: "Сделано успешно"
+          to: 714820764
+          token: 6960121384:AAG_B0Q2sxwL386QIisQofnq0Hei_PTYzJE
+      - name: send default message
+        if: denided()
+        uses: appleboy/telegram-action@master
+        with:
+          message: "Сделано no успешно"
+          to: 714820764
+          token: 6960121384:AAG_B0Q2sxwL386QIisQofnq0Hei_PTYzJE
+        
